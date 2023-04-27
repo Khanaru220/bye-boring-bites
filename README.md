@@ -2,6 +2,6 @@
 
 ## Acknowledge
 
-| Field        | Source                   |
-| ------------ | ------------------------ |
-| UI Component | https://www.hyperui.dev/ |
+| Field        | Source                     |
+| ------------ | -------------------------- |
+| UI Component | <https://www.hyperui.dev/> |
