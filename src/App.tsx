@@ -1,32 +1,25 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import { useCallback, useState } from 'react';
+import TaskCard from '@/components/common/TaskCard';
+import axios from 'axios';
 
 function App() {
-	const [count, setCount] = useState(0);
+	const [activities, setActivities] = useState<object[]>([]);
+
+	const fetchBoredAPI = useCallback(async () => {
+		try {
+			const response = await axios('https://www.boredapi.com/api/activity', {
+				params: { type: 'social' },
+			});
+			setActivities((prev) => [...prev, response.data]);
+		} catch (e) {
+			console.error(e);
+		}
+	}, []);
 
 	return (
 		<>
-			<div className="bg-yellow-200">
-				<a href="https://vitejs.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
+			<button onClick={fetchBoredAPI}>click me to fetch</button>
+			{activities.map((act) => console.log(act))}
 		</>
 	);
 }
