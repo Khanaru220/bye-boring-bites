@@ -18,8 +18,19 @@ function App() {
 
 	return (
 		<>
-			<button onClick={fetchBoredAPI}>click me to fetch</button>
-			{activities.map((act) => console.log(act))}
+			<div className="text-center w-screen">
+				<button onClick={fetchBoredAPI}>click me to fetch</button>
+				<div>
+					{activities
+						.slice(0)
+						.reverse()
+						.map((act) => (
+							// (?) what's this warning?
+							// (FIXME) occur weird order when fetch the similar item
+							<TaskCard {...act} key={act.key} />
+						))}
+				</div>
+			</div>
 		</>
 	);
 }
