@@ -1,17 +1,32 @@
 import { useCallback, useState } from 'react';
-import TaskCard from '@/components/common/TaskCard';
+import TaskCard, { TaskProps } from '@/components/common/TaskCard';
 import axios from 'axios';
 
+interface States extends TaskProps {
+	// (!) not catch type error from APIs fetched data. We might need unit test/assertion
+	key: string;
+}
+
 function App() {
-	const [activities, setActivities] = useState<object[]>([]);
+	// (?) should we need another Type declare for API here
+	const [activities, setActivities] = useState<States[]>([]);
 
 	const fetchBoredAPI = useCallback(async () => {
 		try {
-			const response = await axios('https://www.boredapi.com/api/activity', {
+			const url = 'https://www.boredapi.com/api/activity';
+			const response = await axios(url, {
 				params: { type: 'social' },
 			});
-			setActivities((prev) => [...prev, response.data]);
+			const act: States = response.data;
+
+			setActivities((prev) => {
+				if (prev.length > 0 && prev.some((el) => el?.key === act.key)) {
+					return prev;
+				}
+				return [...prev, act];
+			});
 		} catch (e) {
+			// (TODO) write a wrapper to resolve error
 			console.error(e);
 		}
 	}, []);

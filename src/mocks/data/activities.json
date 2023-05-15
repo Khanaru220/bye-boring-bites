@@ -1,0 +1,92 @@
+[
+	{
+		"activity": "Learn Kotlin",
+		"type": "education",
+		"participants": 1,
+		"price": 0,
+		"link": "https://kotlinlang.org/",
+		"key": "3950821",
+		"accessibility": 0.8
+	},
+	{
+		"activity": "Text a friend you haven't talked to in a long time",
+		"type": "social",
+		"participants": 2,
+		"price": 0.05,
+		"link": "",
+		"key": "6081071",
+		"accessibility": 0.2
+	},
+	{
+		"activity": "Learn to sew on a button",
+		"type": "education",
+		"participants": 1,
+		"price": 0.05,
+		"link": "",
+		"key": "8731971",
+		"accessibility": 0.1
+	},
+	{
+		"activity": "Go to a concert with local artists with some friends",
+		"type": "social",
+		"participants": 3,
+		"price": 0.4,
+		"link": "",
+		"key": "2211716",
+		"accessibility": 0.3
+	},
+	{
+		"activity": "Volunteer at your local food bank",
+		"type": "charity",
+		"participants": 1,
+		"price": 0,
+		"link": "",
+		"key": "2055368",
+		"accessibility": 0.1
+	},
+	{
+		"activity": "Make a couch fort",
+		"type": "recreational",
+		"participants": 1,
+		"price": 0,
+		"link": "",
+		"key": "2352669",
+		"accessibility": 0.08
+	},
+	{
+		"activity": "Volunteer and help out at a senior center",
+		"type": "charity",
+		"participants": 1,
+		"price": 0,
+		"link": "",
+		"key": "3920096",
+		"accessibility": 0.1
+	},
+	{
+		"activity": "Clean out your car",
+		"type": "busywork",
+		"participants": 1,
+		"price": 0,
+		"link": "",
+		"key": "2896176",
+		"accessibility": 0.08
+	},
+	{
+		"activity": "Solve a Rubik's cube",
+		"type": "recreational",
+		"participants": 1,
+		"price": 0,
+		"link": "",
+		"key": "4151544",
+		"accessibility": 0.1
+	},
+	{
+		"activity": "Create a meal plan for the coming week",
+		"type": "cooking",
+		"participants": 1,
+		"price": 0,
+		"link": "",
+		"key": "3491470",
+		"accessibility": 0
+	}
+]

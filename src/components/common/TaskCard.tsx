@@ -1,25 +1,7 @@
-import { ReactElement, useRef } from 'react';
-import PropTypes from 'prop-types';
+import { useRef } from 'react';
 import pickRandomColor from '@/utils/pickRandomColor';
 
-// interface TaskProps {
-// 	name: string;
-// 	type: string;
-// 	participants: number;
-// 	accessibility: number;
-// 	price: number;
-// }
-
-TaskCard.propTypes = {
-	activity: PropTypes.string,
-	type: PropTypes.string,
-	participants: PropTypes.number,
-	accessibility: PropTypes.number,
-	price: PropTypes.number,
-	key: PropTypes.string,
-};
-
-interface TaskProps {
+export interface TaskProps {
 	// (?) need better way solve conflict warning between PropTypes vs TypeScript's implicity 'any'
 	activity: string;
 	type: string;
@@ -34,12 +16,10 @@ export default function TaskCard({
 	participants,
 	accessibility,
 	price,
-}: TaskProps): ReactElement {
+}: TaskProps) {
 	const highlightClass = useRef(pickRandomColor());
 	const randImgURL = useRef(
-		`https://source.unsplash.com/random/300x233/?${Math.floor(
-			Math.random() * 1000
-		)}&?${name.trim().replaceAll(' ', '+')}`
+		`https://source.unsplash.com/random/300x233/?${name.trim()}`
 	);
 
 	// Guide use source.unsplash: https://awik.io/generate-random-images-unsplash-without-using-api/

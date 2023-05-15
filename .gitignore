@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# My ignore
+# (?) not understand how lock file changes when install/uninstall packages
+yarn.lock
+package-lock.json
