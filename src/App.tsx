@@ -1,10 +1,15 @@
 import { useCallback, useState } from 'react';
-import TaskCard from '@/components/common/TaskCard';
+import TaskCard, { TaskProps } from '@/components/common/TaskCard';
 import axios from 'axios';
+
+interface States extends TaskProps {
+	// (!) not catch type error from APIs fetched data. We might need unit test/assertion
+	key: string;
+}
 
 function App() {
 	// (?) should we need another Type declare for API here
-	const [activities, setActivities] = useState<object[]>([]);
+	const [activities, setActivities] = useState<States[]>([]);
 
 	const fetchBoredAPI = useCallback(async () => {
 		try {
@@ -12,7 +17,8 @@ function App() {
 			const response = await axios(url, {
 				params: { type: 'social' },
 			});
-			const act = response.data;
+			const act: States = response.data;
+
 			setActivities((prev) => {
 				if (prev.length > 0 && prev.some((el) => el?.key === act.key)) {
 					return prev;
@@ -20,6 +26,7 @@ function App() {
 				return [...prev, act];
 			});
 		} catch (e) {
+			// (TODO) write a wrapper to resolve error
 			console.error(e);
 		}
 	}, []);

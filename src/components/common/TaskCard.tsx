@@ -1,16 +1,7 @@
-import React, { ReactElement, useRef } from 'react';
-import PropTypes from 'prop-types';
+import { useRef } from 'react';
 import pickRandomColor from '@/utils/pickRandomColor';
 
-// TaskCard.propTypes = {
-// 	activity: PropTypes.string,
-// 	type: PropTypes.string,
-// 	participants: PropTypes.number,
-// 	accessibility: PropTypes.number,
-// 	price: PropTypes.number,
-// };
-
-interface TaskProps {
+export interface TaskProps {
 	// (?) need better way solve conflict warning between PropTypes vs TypeScript's implicity 'any'
 	activity: string;
 	type: string;
