@@ -1,23 +1,14 @@
-import { ReactElement, useRef } from 'react';
+import React, { ReactElement, useRef } from 'react';
 import PropTypes from 'prop-types';
 import pickRandomColor from '@/utils/pickRandomColor';
 
-// interface TaskProps {
-// 	name: string;
-// 	type: string;
-// 	participants: number;
-// 	accessibility: number;
-// 	price: number;
-// }
-
-TaskCard.propTypes = {
-	activity: PropTypes.string,
-	type: PropTypes.string,
-	participants: PropTypes.number,
-	accessibility: PropTypes.number,
-	price: PropTypes.number,
-	key: PropTypes.string,
-};
+// TaskCard.propTypes = {
+// 	activity: PropTypes.string,
+// 	type: PropTypes.string,
+// 	participants: PropTypes.number,
+// 	accessibility: PropTypes.number,
+// 	price: PropTypes.number,
+// };
 
 interface TaskProps {
 	// (?) need better way solve conflict warning between PropTypes vs TypeScript's implicity 'any'
@@ -34,7 +25,7 @@ export default function TaskCard({
 	participants,
 	accessibility,
 	price,
-}: TaskProps): ReactElement {
+}: TaskProps) {
 	const highlightClass = useRef(pickRandomColor());
 	const randImgURL = useRef(
 		`https://source.unsplash.com/random/300x233/?${Math.floor(

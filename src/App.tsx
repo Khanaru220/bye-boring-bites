@@ -3,14 +3,22 @@ import TaskCard from '@/components/common/TaskCard';
 import axios from 'axios';
 
 function App() {
+	// (?) should we need another Type declare for API here
 	const [activities, setActivities] = useState<object[]>([]);
 
 	const fetchBoredAPI = useCallback(async () => {
 		try {
-			const response = await axios('https://www.boredapi.com/api/activity', {
+			const url = 'https://www.boredapi.com/api/activity';
+			const response = await axios(url, {
 				params: { type: 'social' },
 			});
-			setActivities((prev) => [...prev, response.data]);
+			const act = response.data;
+			setActivities((prev) => {
+				if (prev.length > 0 && prev.some((el) => el?.key === act.key)) {
+					return prev;
+				}
+				return [...prev, act];
+			});
 		} catch (e) {
 			console.error(e);
 		}
