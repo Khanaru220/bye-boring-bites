@@ -16,10 +16,11 @@
 4. TypeScript to React project
 5. Manage states and do more with Redux (reduct toolkit, query)
 6. Apply API's data to create more shiny, creative layout and useful design
-7. Mock API to local (work offline + fast)
+7. [x] Mock API to local (work offline + fast)
 8. Apply search feature
 9. Create comment feature like Twitter (authentication + serve data across accounts + database)
 10. Make use more of hooks (useMemo, useCallback, my own custom hook)
+11. has system on task managements to remind + priortize what are core things need to be builds + has an ideas bucket (Trello)
 
 ### What I've not expected to learn?
 
@@ -78,9 +79,7 @@
 1. Core: When feel bored, user can click a button to generate random activites
 2. Community: User can comments on activity as a guide, sharing
 3. Search: user able to search with some indicators (location, environment, budget, accessibility)
-   - (not core): user can pick on map to see recommend activities in that location (based on indicators, native recommend)
 4. Profile: user able to save, take note
-5. (not core) try to make it easiest to interact + fast (good UX) to live through boring mood
 
 ## Acknowledge
 
