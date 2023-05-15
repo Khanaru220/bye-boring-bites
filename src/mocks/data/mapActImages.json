@@ -1,0 +1,45 @@
+[
+	{
+		"activity": "Learn Kotlin",
+		"img": "/src/mocks/data/assets/unsplash_300-233_learn-kotlin.jpg"
+	},
+	{
+		"activity": "Text a friend you haven't talked to in a long time",
+		"img": "/src/mocks/data/assets/unsplash_300-233_text-a-friend.jpg"
+	},
+	{
+		"activity": "Learn to sew on a button",
+		"img": "/src/mocks/data/assets/unsplash_300-233_learn-to-sew.jpg"
+	},
+	{
+		"activity": "Go to a concert with local artists with some friends",
+		"img": "/src/mocks/data/assets/unsplash_300-233_go-to-a.jpg"
+	},
+	{
+		"activity": "Volunteer at your local food bank",
+		"img": "/src/mocks/data/assets/unsplash_300-233_volunteer-at-your.jpg"
+	},
+	{
+		"activity": "Make a couch fort",
+		"img": "/src/mocks/data/assets/unsplash_300-233_make-a-couch.jpg"
+	},
+	{
+		"activity": "Volunteer and help out at a senior center",
+		"img": "/src/mocks/data/assets/unsplash_300-233_volunteer-and-help.jpg"
+	},
+	{
+		"activity": "Clean out your car",
+		"img": "/src/mocks/data/assets/unsplash_300-233_clean-out-your.jpg"
+	},
+	{
+		"activity": "Solve a Rubik's cube",
+		"img": "/src/mocks/data/assets/unsplash_300-233_solve-a-rubik.jpg"
+	},
+	{
+		"activity": "Create a meal plan for the coming week",
+		"img": "/src/mocks/data/assets/unsplash_300-233_create-a-meal.jpg"
+	},
+	{
+		"comment": "//(NOTE) Can I use javascript instead to make use 'import' (use @) syntax?"
+	}
+]

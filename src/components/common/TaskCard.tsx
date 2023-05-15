@@ -19,9 +19,7 @@ export default function TaskCard({
 }: TaskProps) {
 	const highlightClass = useRef(pickRandomColor());
 	const randImgURL = useRef(
-		`https://source.unsplash.com/random/300x233/?${Math.floor(
-			Math.random() * 1000
-		)}&?${name.trim().replaceAll(' ', '+')}`
+		`https://source.unsplash.com/random/300x233/?${name.trim()}`
 	);
 
 	// Guide use source.unsplash: https://awik.io/generate-random-images-unsplash-without-using-api/
